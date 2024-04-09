@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://3rsdviq1ioio"]
+
+[ext_resource type="Texture2D" uid="uid://br53m4ueus8eo" path="res://alienBlue.png" id="1_xgxvq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qms1n"]
+radius = 23.0
+height = 96.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w7erx"]
+radius = 34.2345
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xgxvq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_qms1n")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -13)
+shape = SubResource("CircleShape2D_w7erx")
